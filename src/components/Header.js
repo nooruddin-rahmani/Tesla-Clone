@@ -9,20 +9,20 @@ function Header() {
   const cars = useSelector(selectCars);
   return (
     <Container>
-      <a>
+      <a href="/">
         <img src="/images/logo.svg" alt="tesla logo"></img>
       </a>
       <Menu>
         {cars &&
           cars.map((car, index) => (
-            <a key={index} href="#">
+            <a key={index} href="/">
               {car}
             </a>
           ))}
       </Menu>
       <RightMenu>
-        <a href="#">Shop</a>
-        <a href="#">Tesla Account</a>
+        <a href="/">Shop</a>
+        <a href="/">Tesla Account</a>
         <CustomMenu onClick={() => setBurgerStatus(true)} />
       </RightMenu>
       <BurgerNav show={burgerStatus}>
@@ -32,26 +32,26 @@ function Header() {
         {cars &&
           cars.map((car, index) => (
             <li>
-              <a href="#">{car}</a>
+              <a href="/">{car}</a>
             </li>
           ))}
         <li>
-          <a href="#">Existing Inventory</a>
+          <a href="/">Existing Inventory</a>
         </li>
         <li>
-          <a href="#">Used Inventory</a>
+          <a href="/">Used Inventory</a>
         </li>
         <li>
-          <a href="#">Cybertruck</a>
+          <a href="/">Cybertruck</a>
         </li>
         <li>
-          <a href="#">Roadster</a>
+          <a href="/">Roadster</a>
         </li>
         <li>
-          <a href="#">Existing Inventory</a>
+          <a href="/">Existing Inventory</a>
         </li>
         <li>
-          <a href="#">Existing Inventory</a>
+          <a href="/">Existing Inventory</a>
         </li>
       </BurgerNav>
     </Container>
